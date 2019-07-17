@@ -1,9 +1,98 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>My first page!</title>
-    </head>
-    <body>
-        <h1>Hello!</h1>
-    </body>
+<html lang="EN">
+<head>
+    <title>My first page!</title>
+    <link rel="stylesheet" type="text/css" href="myStyleSheet.css" />
+    <style>
+        body {
+            background-color: gainsboro;
+        }
+
+        form {
+            background-color: beige;
+            padding: 10px;
+        }
+
+        form input[type=text], input[type=date], select {
+            width: 95%;
+        }
+
+        label {
+            color: darkgoldenrod;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: darkred;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+<h2 class="flexCentered">Rental Application Form</h2>
+
+<div class="flexCentered">
+    <form id="myForm">
+        <label for="textInput1">Name</label>
+        <input type="text" name="textInput1" id="textInput1" placeholder="Enter your name"><br><br>
+
+        <label for="textInput2">Reason for renting</label>
+        <input type="text" name="textInput2" id="textInput2" placeholder="Why are you looking for accomodation?"><br><br>
+
+        <label for="dateSelector">Moving in date</label>
+        <input type="date" name="dateSelector" id="dateSelector"><br><br>
+
+            <label for="citiesSelector">Choose your city</label><br>
+            <select name="citiesSelector" id="citiesSelector">
+                <option value="timisoara" selected>Timisoara</option>
+                <option value="arad">Arad</option>
+                <option value="oradea">Oradea</option>
+                <option value="bucuresti">Bucuresti</option>
+                <option value="clujNapoca">Cluj Napoca</option>
+            </select><br><br>
+
+        <label for="apartmentFloorsSelector">Choose apartment floor</label><br>
+            <select name="apartmentFloorsSelector" id="apartmentFloorsSelector" size="4" multiple>
+                <option value="0">Ground Floor</option>
+                <option value="1">1st Floor</option>
+                <option value="2">2nd Floor</option>
+                <option value="3">3rd Floor</option>
+                <option value="4">4th Floor</option>
+                <option value="5">5th Floor</option>
+            </select><br><br>
+
+        <label for="fileChooser">Upload your application</label><br>
+            <input type="file" name="fileChooser" id="fileChooser" accept="*/*"><br><br>
+
+        <fieldset>
+            <legend>Preferred mean of transportation</legend>
+            <input type="checkbox" name="transportation" value="Bus">Bus<br>
+            <input type="checkbox" name="transportation" value="Subway">Subway<br>
+            <input type="checkbox" name="transportation" value="Bicycle">Bicycle<br>
+            <input type="checkbox" name="transportation" value="Car">Car<br>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>How many rooms should the apartment have?</legend>
+            <input type="checkbox" name="numberOfRooms" value="1">1<br>
+            <input type="checkbox" name="numberOfRooms" value="2">2<br>
+            <input type="checkbox" name="numberOfRooms" value="3">3<br>
+            <input type="checkbox" name="numberOfRooms" value="4">4<br>
+        </fieldset><br>
+
+        <input type="submit" value="Send rental application">
+    </form>
+</div><br>
+
+<script>
+    document.getElementById("myForm").onsubmit = function () {
+      alert("You are about the send your rental application")
+    };
+</script>
+
+<div class="flexCentered">
+    <button onclick="window.location.href = 'http://localhost:63342/WebFundamentals/aboutMe.html';">About Me</button>
+</div>
+</body>
 </html>
