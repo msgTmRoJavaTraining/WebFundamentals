@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <link rel="stylesheet" type="text/css" href="myStyleSheet.css" />
+    <style>
+
+        body {
+            background-image: url("https://cdn.pixabay.com/photo/2018/03/15/07/10/grid-3227320_1280.jpg");
+            background-size: cover;
+            position: relative;
+            margin: 0;
+        }
+        body:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #A4E8E0;
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        .myParagrapfTags {
+            width: 70%;
+            font-weight: lighter;
+            font-style: italic;
+            font-family: sans-serif, Georgia;
+            color: darkslategray;
+        }
+
+        img {
+            width: 350px;
+            height: 220px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="flexCentered">
+    <img src="http://cdn.litlepups.net/2019/01/20/baby-snow-leopard-kitten-black-cat-hd-photo.jpg" alt="Profil Picture"/>
+</div>
+<div class="flexCentered" id="primaryDiv">
+    <p class="myParagrapfTags">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada sapien massa, eu varius sapien tristique et. Praesent posuere pulvinar rutrum. Praesent ut enim consectetur, convallis augue quis, pulvinar lectus. Mauris faucibus vehicula erat, quis rhoncus nulla vehicula eget. Mauris feugiat ligula ut lectus ultricies ullamcorper. Nunc sollicitudin, augue pharetra consequat aliquam, orci metus aliquam leo, sodales volutpat metus sem sed sapien. Nulla vitae imperdiet felis, id egestas massa. Etiam congue tincidunt erat eu iaculis. Mauris metus nibh, vestibulum ut ex a, mattis euismod est. Pellentesque ullamcorper justo vitae eros rhoncus, id sodales dolor imperdiet. Sed et orci vitae odio congue sodales tempus non metus. Sed viverra molestie risus, in venenatis massa finibus eu. Phasellus vitae dictum odio. Suspendisse porttitor aliquet finibus.
+    </p>
+    <p class="myParagrapfTags">
+        Ut dapibus volutpat est, nec tristique leo. Donec nec magna nec justo mollis dignissim. Donec arcu elit, dapibus interdum consequat eget, volutpat vitae felis. Nunc molestie ante ut libero dignissim iaculis. Maecenas quis dictum nunc. Aliquam faucibus consectetur sem sit amet volutpat. Etiam aliquam metus vitae tellus maximus euismod. In hac habitasse platea dictumst. Maecenas consequat at lacus ut placerat. Donec sed fermentum leo. In placerat ultrices pulvinar. Suspendisse sed tincidunt odio. Etiam semper imperdiet lorem id tincidunt. Suspendisse eu sem viverra lorem eleifend dapibus eu a eros. Fusce in erat vel mi dapibus rutrum. Phasellus non luctus augue.
+    </p>
+</div>
+<div class="flexCentered">
+    <button onclick="window.location.href = 'http://localhost:63342/WebFundamentals/index.html';">Back</button>
+</div>
+</body>
+</html>
