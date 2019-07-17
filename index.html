@@ -3,7 +3,112 @@
     <head>
         <title>My first page!</title>
     </head>
+    <style>
+        .flex-container {
+            display: flex;
+            height: 500px;
+            align-items: center;
+        }
+
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        select {
+            width: 100%;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #80ced6;
+        }
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+
+
     <body>
         <h1>Hello!</h1>
+        <form>
+            First name:<br>
+            <input type="text" name="firstname" placeholder="First name">
+            <br>
+            Last name:<br>
+            <input type="text" name="lastname" placeholder="Second name">
+            <br><br>
+            <input type="submit" value="Submit">
+            <br/>
+
+            <select>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+            </select>
+
+            <select>
+                <option value="Internet Exploreer">Internet Explorer</option>
+                <option value="Opera">Opera</option>
+                <option value="Mozila">Mozila</option>
+                <option value="Chrome">Chrome</option>
+            </select>
+            <br/>
+
+            Select a file: <input type="file" name="myFile"><br><br>
+
+
+            <div>
+                <h3>Fruits</h3>
+                <label>
+                    <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Kiwi</label>
+                <label>
+                    <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Jackfruit</label>
+                <label>
+                    <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Mango</label>
+            </div>
+            <div>
+                <h3>Animals</h3>
+                <label>
+                    <input type="checkbox" class="radio" value="1" name="fooby[2][]" />Tiger</label>
+                <label>
+                    <input type="checkbox" class="radio" value="1" name="fooby[2][]" />Sloth</label>
+                <label>
+                    <input type="checkbox" class="radio" value="1" name="fooby[2][]" />Cheetah</label>
+            </div>
+
+            <button type="button" class="button" onclick="alert('Hello world!')">Submit</button>
+
+        </form>
     </body>
 </html>
