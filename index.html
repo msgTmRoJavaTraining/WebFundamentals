@@ -3,7 +3,155 @@
     <head>
         <title>My first page!</title>
     </head>
-    <body>
-        <h1>Hello!</h1>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            'background-color: burlywood;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .central{
+            font-family: 'Open Sans Condensed', arial, sans;
+            width: 500px;
+            padding: 30px;
+            background: #FFFFFF;
+            margin: 0.1px auto;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+            -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+            -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+        }
+        .central h2{
+            background: #4D4D4D;
+            text-transform: uppercase;
+            font-family: 'Open Sans Condensed', sans-serif;
+            color: #797979;
+            font-size: 18px;
+            font-weight: 100;
+            padding: 20px;
+            margin: -30px -30px 30px -30px;
+        }
+        .central input[type="text"],
+        .central input[type="date"],
+        .central input[type="file"],
+        .central select
+        {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            outline: none;
+            display: block;
+            width: 100%;
+            padding: 7px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            background: transparent;
+            margin-bottom: 10px;
+            font: 16px Arial, Helvetica, sans-serif;
+            height: 45px;
+        }
+
+
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #4A4639;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            width: 100px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        a:link, a:visited {
+            background-color: rgba(52, 45, 47, 0.76);
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            size: 50px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active {
+            background-color: rgba(100, 100, 100, 0.7);
+        }
+
+    </style>
+    <body style=" background-image: url('.idea/design.jpg')" >
+    <a href="aboutMe.html" style="font-family: 'Open Sans Condensed', arial, sans"> Go back</a>
+        <div class ="central">
+            <h2>User form</h2>
+            <form>
+                <label >First Name</label><br>
+                    <input type="text" name="firstname" placeholder="Your name.."><br>
+                <label>Last Name</label><br>
+                    <input type="text" name="lastname" placeholder="Your last name.."><br>
+                <label> Date selector:</label><br>
+                    <input type="date" name="dateSelector"><br>
+                <label>Where would you want to go? </label> <br>
+                    <select name="destination">
+                        <option value="volvo">sea</option>
+                        <option value="saab">mountains</option>
+                    </select><br>
+                <label> What do you like to travel by? </label> <br>
+                    <select name="transport">
+                        <option value="car">car</option>
+                        <option value="plain">plain</option>
+                    </select><br>
+                <label> File selector </label><br>
+                    <input type="file" class="pic" accept="image/*"><br>
+                <fieldset>
+                    <legend>What is your favorite pet?</legend>
+                    <input type="checkbox" name="favorite_pet" value="Cats">cats<br>
+                    <input type="checkbox" name="favorite_pet" value="Dogs">dogs<br>
+                    <input type="checkbox" name="favorite_pet" value="Birds">birds<br>
+                </fieldset> <br>
+                <fieldset>
+                    <legend>What is your favourite color?</legend>
+                    <input type="checkbox" name="favorite_color" value="red">red<br>
+                    <input type="checkbox" name="favorite_color" value="blue">blue<br>
+                    <input type="checkbox" name="favorite_color" value="yellow">yellow<br>
+                </fieldset>
+                <br><br>
+                <button class = "button"onclick="myFunction()" style="vertical-align:middle"><span>Submit </span></button>
+
+            </form>
+        </div>
+    <script>
+        function myFunction() {
+            alert("I am an alert box!");
+        }
+    </script>
     </body>
 </html>
