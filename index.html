@@ -2,8 +2,189 @@
 <html>
     <head>
         <title>My first page!</title>
+
+
+
+        <style>
+            #wpf-center {
+                margin-left: auto !important;
+                margin-right: auto !important;
+                max-width: 500px;
+            }
+        </style>
+
+
+        <style>
+            .dropbtn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 15px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {background-color: #f1f1f1}
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+            }
+        </style>
+
+        <style>
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 140px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .desc {
+                padding: 16px;
+                text-align: center;
+            }
+        </style>
+
+        <style>
+            body {
+                background: url("abc.jpg");
+            }
+        </style>
+
+        <style>
+            .flex-container {
+                display: flex;
+                flex-wrap: nowrap;
+                background-color: DodgerBlue;
+            }
+
+            .flex-container > div {
+                background-color: #f1f1f1;
+                width: 100px;
+                margin: 10px;
+                text-align: center;
+                line-height: 75px;
+                font-size: 30px;
+            }
+        </style>
     </head>
     <body>
-        <h1>Hello!</h1>
+
+        <script>
+            function show_alert() {
+                document.getElementById("wpf-center").addEventListener('click', function () {
+                    alert('clicked!')
+                })
+            }
+            </script>
+        <div id="wpf-center">
+            <h1>Hello!</h1>
+        <form>
+            First name:<br>
+            <input type="text" name="firstname"><br>
+            Last name:<br>
+            <input type="text" name="lastname">
+            &nbsp; &nbsp; &nbsp;
+            <input type="submit" onclick="show_alert()" value="Submit"> <br><br>
+
+            Birthday:
+            <input type="date" name="bday"><br><br>
+
+
+            <fieldset>
+                <legend>What is Your Favorite Pet?</legend>
+                <input type="checkbox" name="favorite_pet" value="Cats">Cats<br>
+                <input type="checkbox" name="favorite_pet" value="Dogs">Dogs<br>
+                <input type="checkbox" name="favorite_pet" value="Birds">Birds<br>
+                <br>
+
+            </fieldset>
+
+            <fieldset>
+                <br><legend>What is Your Favorite color?</legend>
+                <input type="checkbox" name="favorite_color" value="Red">Red<br>
+                <input type="checkbox" name="favorite_color" value="Blue">Blue<br>
+                <input type="checkbox" name="favorite_color" value="Green">Green<br>
+                <br>
+
+            </fieldset>
+
+            <br><br> Select a file: <input type="file" name="myFile"><br>
+
+            <br>
+
+
+            <div class="dropdown">
+                <button class="dropbtn">Tourist info</button>
+                <div class="dropdown-content">
+                    <a href="https://ro.wikipedia.org/wiki/Helsinki">Helsinki</a>
+                    <a href="https://ro.wikipedia.org/wiki/Stockholm">Stockholm</a>
+                    <a href="https://ro.wikipedia.org/wiki/Oslo">Oslo</a>
+                </div>
+            </div>
+
+            &nbsp; &nbsp; &nbsp;    &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+
+            <div class="dropdown">
+                <button class="dropbtn">About me</button>
+                <div class="dropdown-content">
+                    <a href="  http://localhost:63342/WebFundamentals/About%20me.html?_ijt=bmsv1l0di4oa0kn47poavdof5l">My page</a>
+                </div>
+            </div>
+
+            <br><br>
+
+            &nbsp; &nbsp; &nbsp;    &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+            <div class="dropdown">
+                <img src="Sagrada.jpg" alt="Sagrada-Familia" width="100" height="50">
+                <div class="dropdown-content">
+                    <img src="Sagrada.jpg" alt="Sagrada-Familia" width="300" height="200">
+                    <div class="desc">Sagrada-Familia</div>
+                </div>
+            </div>
+
+
+
+        </form>
+        </div>>
+
+
     </body>
 </html>
