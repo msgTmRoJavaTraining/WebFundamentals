@@ -1,9 +1,51 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My first page!</title>
+        <link rel="stylesheet" type="text/css" href="myStyle.css">
+        <title>Adoptie catei</title>
     </head>
-    <body>
-        <h1>Hello!</h1>
+    <body background="background.jpg">
+    <h1 align="center">Descrie catelul pe care ti-l doresti!</h1>
+        <form id="searchform">
+            <div need-margin="true">
+                <input type="text" name="name" placeholder="Nume"/>
+            </div>
+
+            <div need-margin="true">
+                Sex:
+                <select>
+                    <option value="aaa">Femela</option>
+                    <option value="aaa">Mascul</option>
+                </select>
+            </div>
+
+            <div need-margin="true" class="input">
+                <input type="text" name="color" placeholder="Culoare"/>
+            </div>
+
+            <div need-margin="true" class="input">
+                <input type="text" name="breed" placeholder="Rasa"/>
+            </div>
+
+            <div need-margin="true">
+                <input type="text" name="age" placeholder="Varsta"/>
+            </div>
+
+            <div need-margin="true">
+                Data livrarii catelului:
+                <input type="date" name="delivery_date">
+            </div>
+
+            <div need-margin="true">
+                Va rugam incarcati o imagine cu C.I.
+                <input type="file" name="image">
+            </div>
+
+            <div need-margin="true">
+                <input  id="btnSubmit" type="submit" name="submit" value="Trimite comanda"/>
+                <a href="about.html">Despre</a>
+            </div>
+            <script src="myScript.js"></script>
+        </form>
     </body>
 </html>
