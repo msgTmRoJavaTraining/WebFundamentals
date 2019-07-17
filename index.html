@@ -2,8 +2,108 @@
 <html>
     <head>
         <title>My first page!</title>
+        <style>
+            #text{
+                background-color: #ff8080;
+                border-style: solid;
+                text-align: center;
+                width: 300px;
+                height: 45px;
+                position: relative;
+            ;
+
+            }
+            #birth{
+                background-color: #ffba92;
+                border-style: solid;
+                text-align: center;
+                width: 300px;
+                height: 45px;
+                position: relative;
+            }
+            #select{
+                background-color: #e0f5b9;
+                border-style: solid;
+                text-align: center;
+                width: 300px;
+                height: 45px;
+                position: relative;
+            }
+            #upload{
+                background-color: #c6f1d6;
+                border-style: solid;
+                text-align: center;
+                width: 300px;
+                height: 45px;
+                position: relative;
+            }
+            body{
+                text-align: center;
+                background-color: #cba1d2;
+                position: center;
+                justify-content: center;
+
+            }
+            #casuta{
+                background-color: #fffcc1;
+                border-style: solid;
+                text-align: center;
+                width: 310px;
+                height: 500px;
+                margin-top: 30px;
+                position: relative;
+                padding: 50px;
+                display: inline-block;
+            }
+        </style>
+
+        <script>
+            function show_alert(){
+                alert('you have pressed the button!');
+            }
+        </script>
+
     </head>
     <body>
-        <h1>Hello!</h1>
+    <div id="casuta">
+        <h1>Please fill out this form!</h1>
+
+        <form class="form">
+            <div id="text">
+            <input type="text" name="textbox" placeholder="Nume"/>
+            <input type="text" name="textbox" placeholder="Prenume"/><br><br>
+            </div>
+
+            <div id="birth">
+            Birthday:
+            <input type="date" name="data" /><br><br>
+            </div>
+
+            <div id="select">
+            <select>
+                <option value="sex">Please select your sex</option>
+                <option value="female">Female </option>
+                <option value="male">Male</option>
+            </select>
+            </div>
+
+            <div id="upload">
+            Select a file to be uploaded <input type="file" name="myFile"><br><br>
+            </div>
+
+            <div id="checkbox">
+            <input type="checkbox" name="vegetarian" value="vegetarian">Vegetarian<br>
+            <input type="checkbox" name="non-vegetarian" value="non-vegetarian">Non-Vegetarian<br><br>
+            </div>
+
+            <input type="submit" name="submit" onclick="show_alert();" />
+            <input type="button" onclick="window.location.href = 'aboutme.html';" value="About me">
+
+        </form>
+    </div>
+
+
+
+
     </body>
 </html>
